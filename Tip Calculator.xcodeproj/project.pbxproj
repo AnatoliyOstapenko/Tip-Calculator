@@ -13,6 +13,7 @@
 		FAA8923126A4617300AF33F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA8922F26A4617300AF33F8 /* Main.storyboard */; };
 		FAA8923326A4617700AF33F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA8923226A4617700AF33F8 /* Assets.xcassets */; };
 		FAA8923626A4617700AF33F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA8923426A4617700AF33F8 /* LaunchScreen.storyboard */; };
+		FAA8923F26A4619300AF33F8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAA8923E26A4619300AF33F8 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FAA8923226A4617700AF33F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA8923526A4617700AF33F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA8923726A4617700AF33F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA8923E26A4619300AF33F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		FAA8921D26A4617200AF33F8 = {
 			isa = PBXGroup;
 			children = (
+				FAA8923E26A4619300AF33F8 /* README.md */,
 				FAA8922826A4617300AF33F8 /* Tip Calculator */,
 				FAA8922726A4617300AF33F8 /* Products */,
 			);
@@ -58,13 +61,29 @@
 			children = (
 				FAA8922926A4617300AF33F8 /* AppDelegate.swift */,
 				FAA8922B26A4617300AF33F8 /* SceneDelegate.swift */,
-				FAA8922D26A4617300AF33F8 /* ViewController.swift */,
-				FAA8922F26A4617300AF33F8 /* Main.storyboard */,
+				FAA8924126A461B100AF33F8 /* Controller */,
+				FAA8924226A461C400AF33F8 /* View */,
 				FAA8923226A4617700AF33F8 /* Assets.xcassets */,
 				FAA8923426A4617700AF33F8 /* LaunchScreen.storyboard */,
 				FAA8923726A4617700AF33F8 /* Info.plist */,
 			);
 			path = "Tip Calculator";
+			sourceTree = "<group>";
+		};
+		FAA8924126A461B100AF33F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAA8922D26A4617300AF33F8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAA8924226A461C400AF33F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA8922F26A4617300AF33F8 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +145,7 @@
 			files = (
 				FAA8923626A4617700AF33F8 /* LaunchScreen.storyboard in Resources */,
 				FAA8923326A4617700AF33F8 /* Assets.xcassets in Resources */,
+				FAA8923F26A4619300AF33F8 /* README.md in Resources */,
 				FAA8923126A4617300AF33F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
