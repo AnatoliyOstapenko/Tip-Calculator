@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4F48AB26A494C000F32332 /* TipBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F48AA26A494C000F32332 /* TipBrain.swift */; };
+		FA4F48B026A4C66700F32332 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F48AF26A4C66700F32332 /* Tip.swift */; };
 		FAA8922A26A4617300AF33F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8922926A4617300AF33F8 /* AppDelegate.swift */; };
 		FAA8922C26A4617300AF33F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8922B26A4617300AF33F8 /* SceneDelegate.swift */; };
 		FAA8922E26A4617300AF33F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8922D26A4617300AF33F8 /* ViewController.swift */; };
@@ -14,9 +16,12 @@
 		FAA8923326A4617700AF33F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA8923226A4617700AF33F8 /* Assets.xcassets */; };
 		FAA8923626A4617700AF33F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA8923426A4617700AF33F8 /* LaunchScreen.storyboard */; };
 		FAA8923F26A4619300AF33F8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAA8923E26A4619300AF33F8 /* README.md */; };
+		FAA8924526A487CA00AF33F8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8924426A487CA00AF33F8 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA4F48AA26A494C000F32332 /* TipBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipBrain.swift; sourceTree = "<group>"; };
+		FA4F48AF26A4C66700F32332 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		FAA8922626A4617300AF33F8 /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA8922926A4617300AF33F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA8922B26A4617300AF33F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		FAA8923526A4617700AF33F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA8923726A4617700AF33F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA8923E26A4619300AF33F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FAA8924426A487CA00AF33F8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA4F48AD26A494D000F32332 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA4F48AA26A494C000F32332 /* TipBrain.swift */,
+				FA4F48AF26A4C66700F32332 /* Tip.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FAA8921D26A4617200AF33F8 = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +76,9 @@
 			children = (
 				FAA8922926A4617300AF33F8 /* AppDelegate.swift */,
 				FAA8922B26A4617300AF33F8 /* SceneDelegate.swift */,
-				FAA8924126A461B100AF33F8 /* Controller */,
+				FA4F48AD26A494D000F32332 /* Model */,
 				FAA8924226A461C400AF33F8 /* View */,
+				FAA8924126A461B100AF33F8 /* Controller */,
 				FAA8923226A4617700AF33F8 /* Assets.xcassets */,
 				FAA8923426A4617700AF33F8 /* LaunchScreen.storyboard */,
 				FAA8923726A4617700AF33F8 /* Info.plist */,
@@ -74,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA8922D26A4617300AF33F8 /* ViewController.swift */,
+				FAA8924426A487CA00AF33F8 /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA8924526A487CA00AF33F8 /* SecondViewController.swift in Sources */,
 				FAA8922E26A4617300AF33F8 /* ViewController.swift in Sources */,
 				FAA8922A26A4617300AF33F8 /* AppDelegate.swift in Sources */,
+				FA4F48B026A4C66700F32332 /* Tip.swift in Sources */,
 				FAA8922C26A4617300AF33F8 /* SceneDelegate.swift in Sources */,
+				FA4F48AB26A494C000F32332 /* TipBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

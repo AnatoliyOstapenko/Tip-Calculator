@@ -49,11 +49,11 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOJ-Ju-md9" userLabel="Text Field View">
                                                         <rect key="frame" x="0.0" y="40" width="374" height="304"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type here..." placeholder="Enter amount of your bill" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kME-eA-vFh">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter amount of your bill..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kME-eA-vFh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="304"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
@@ -91,6 +91,9 @@
                                                                         <subviews>
                                                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="ikr-3a-3iF">
                                                                                 <rect key="frame" x="45" y="14" width="94" height="32"/>
+                                                                                <connections>
+                                                                                    <action selector="stepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="U8V-4S-t9M"/>
+                                                                                </connections>
                                                                             </stepper>
                                                                         </subviews>
                                                                         <constraints>
@@ -152,6 +155,9 @@
                                                                                 <state key="normal" title="0%" backgroundImage="QuizButton">
                                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="precentButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgu-gy-XSa"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <constraints>
@@ -172,6 +178,9 @@
                                                                                 <state key="normal" title="10%" backgroundImage="QuizButton">
                                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="precentButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="boL-rp-x6q"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <constraints>
@@ -192,6 +201,9 @@
                                                                                 <state key="normal" title="20%" backgroundImage="QuizButton">
                                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="precentButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHl-2H-FNo"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <constraints>
@@ -222,6 +234,9 @@
                                                                 <state key="normal" title="CALCULATE" backgroundImage="QuizButton">
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8e-ck-QA3"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -261,42 +276,50 @@
                             <constraint firstItem="Sf7-G7-EmT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="v86-jC-QUU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="kME-eA-vFh" id="K1k-JK-N2D"/>
+                        <outlet property="personLabel" destination="Old-3m-dLd" id="wG4-HX-yEO"/>
+                        <outlet property="tenButton" destination="yws-nJ-1NA" id="MZ9-Ah-fe7"/>
+                        <outlet property="twentyButton" destination="jJu-f1-UJl" id="ujQ-ZN-Njz"/>
+                        <outlet property="zeroButton" destination="kZn-Q8-VLJ" id="F9Z-CC-So8"/>
+                        <segue destination="4Vv-0J-DjS" kind="presentation" identifier="goToSecondView" id="u8S-H7-bBa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="75.669642857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="T0G-Ld-OLs">
             <objects>
-                <viewController id="4Vv-0J-DjS" sceneMemberID="viewController">
+                <viewController id="4Vv-0J-DjS" customClass="SecondViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PHe-E7-Hrq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="HdI-Gu-9lg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="frJ-xn-Cdh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKi-v9-Q5r" userLabel="United View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="714"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aoc-SX-87B">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="714"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wtj-Df-JNM" userLabel="Top View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="355"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1P9-QN-uNF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="355"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgC-9b-YPS" userLabel="Person View">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="176.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1Y-hf-E2Y" userLabel="Person Label">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="176.5"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -310,10 +333,10 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdI-Sy-NKC" userLabel="Tip View">
-                                                                        <rect key="frame" x="0.0" y="181" width="414" height="179"/>
+                                                                        <rect key="frame" x="0.0" y="178.5" width="414" height="176.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9El-yF-Zgn" userLabel="Tip Label">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="176.5"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -337,10 +360,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kK9-or-Oel" userLabel="Resume View">
-                                                        <rect key="frame" x="0.0" y="364" width="414" height="360"/>
+                                                        <rect key="frame" x="0.0" y="359" width="414" height="355"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ITp-iG-DJi" userLabel="Resume Label">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="355"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -364,7 +387,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoI-yZ-LcE" userLabel="Button View">
-                                        <rect key="frame" x="0.0" y="728" width="414" height="90"/>
+                                        <rect key="frame" x="0.0" y="718" width="414" height="90"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyl-ZM-vSV">
                                                 <rect key="frame" x="42" y="5" width="330" height="80"/>
@@ -376,6 +399,9 @@
                                                 <state key="normal" title="RECALCULATE" backgroundImage="QuizButton">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="recalculateButtonPressed:" destination="4Vv-0J-DjS" eventType="touchUpInside" id="diM-Wc-ZYA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -405,6 +431,10 @@
                             <constraint firstItem="r7x-Ya-L4g" firstAttribute="trailing" secondItem="frJ-xn-Cdh" secondAttribute="trailing" id="xle-U3-b5j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resume" destination="ITp-iG-DJi" id="Ouf-bp-J1o"/>
+                        <outlet property="tipPerPersonLabel" destination="9El-yF-Zgn" id="AwP-8w-OAs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EWI-xR-1WU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
