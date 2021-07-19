@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var tipBrain = TipBrain()
+    var person = 0
     
     @IBOutlet weak var billTextField: UITextField!
     @IBOutlet weak var personLabel: UILabel!
@@ -39,16 +40,30 @@ class ViewController: UIViewController {
         
     }
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        //first of all I had to unwrap optional billTextField to ues further
+        guard let textField = billTextField.text else {
+            return
+        }
+        // unwrapping textFielt to transfer value textField to func getPersonAndBill
+        if let bill = Int(textField) {
+            tipBrain.getPersonAndBill(person, bill)
+        } else {
+            // clear text field if user types wrong
+            billTextField.text = ""
+        }
         
         
         
     }
     
     @IBAction func stepperPressed(_ sender: UIStepper) {
-        //transfer value from stepper to label. It's necessary to change Double to Int
+        
+        
+        person = Int(sender.value)
+        
+        //transfer value from stepper to label
         //description for textual representation of this value.
-        personLabel.text = Int(sender.value).description
-        tipBrain.personQuantity = Int(sender.value)
+        personLabel.text = Int(person).description
         
         // hide keyboard when stpper pressed
         billTextField.endEditing(true)
