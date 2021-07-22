@@ -8,6 +8,8 @@
 import UIKit
 
 class SecondViewController: ViewController {
+    var total: String?
+    var report: String?
     
     
     @IBOutlet weak var tipPerPersonLabel: UILabel!
@@ -17,10 +19,16 @@ class SecondViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // showing total and report from prepare function in ViewController class
+        tipPerPersonLabel.text = total
+        resume.text = report
+        
     }
     
     @IBAction func recalculateButtonPressed(_ sender: UIButton) {
+        
+        // segue sends back to ViewController
+        self.dismiss(animated: true, completion: nil)
     }
     
     
