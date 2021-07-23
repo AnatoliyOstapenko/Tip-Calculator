@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FA4F48AB26A494C000F32332 /* TipBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F48AA26A494C000F32332 /* TipBrain.swift */; };
-		FA4F48B026A4C66700F32332 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F48AF26A4C66700F32332 /* Tip.swift */; };
 		FAA8922A26A4617300AF33F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8922926A4617300AF33F8 /* AppDelegate.swift */; };
 		FAA8922C26A4617300AF33F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8922B26A4617300AF33F8 /* SceneDelegate.swift */; };
 		FAA8922E26A4617300AF33F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8922D26A4617300AF33F8 /* ViewController.swift */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		FA4F48AA26A494C000F32332 /* TipBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipBrain.swift; sourceTree = "<group>"; };
-		FA4F48AF26A4C66700F32332 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		FAA8922626A4617300AF33F8 /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA8922926A4617300AF33F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA8922B26A4617300AF33F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				FA4F48AA26A494C000F32332 /* TipBrain.swift */,
-				FA4F48AF26A4C66700F32332 /* Tip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,7 +174,6 @@
 				FAA8924526A487CA00AF33F8 /* SecondViewController.swift in Sources */,
 				FAA8922E26A4617300AF33F8 /* ViewController.swift in Sources */,
 				FAA8922A26A4617300AF33F8 /* AppDelegate.swift in Sources */,
-				FA4F48B026A4C66700F32332 /* Tip.swift in Sources */,
 				FAA8922C26A4617300AF33F8 /* SceneDelegate.swift in Sources */,
 				FA4F48AB26A494C000F32332 /* TipBrain.swift in Sources */,
 			);
