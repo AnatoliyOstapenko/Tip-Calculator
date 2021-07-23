@@ -10,7 +10,8 @@ import UIKit
 struct TipBrain {
     var tipPercent: Float = 0
     var totalTip: Float = 0
-    let person = 1
+    var person = 1
+
     
     mutating func percentCalculation(_ percent: String) {
         switch percent {
@@ -30,13 +31,13 @@ struct TipBrain {
         
     }
     mutating func getTip() -> String {
-        let tip = "Total per person: \(String(format: "%.0f", totalTip))"
+        let tip = (String(format: "%.0f", totalTip))
         return tip
 
     }
     
-    mutating func getReport() -> String {
-        let report = "Split between \(person), with \(tipPercent) percent tip"
+    mutating func getReport(_ person: Int) -> String {
+        let report = "Split between \(person) people, with \(String(format: "%.0f", tipPercent * 100))% tip"
         return report
     }
     

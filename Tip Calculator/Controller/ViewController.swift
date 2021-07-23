@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         
         //transfer value from stepper to label
         //description for textual representation of this value.
-        personLabel.text = Int(person).description
+        personLabel.text = person.description
         
         // hide keyboard when stepper pressed
         billTextField.endEditing(true)
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         button.layer.borderWidth = 6
     }
     
-    // this function is needed to transmited information from ViewController to SecondViewController
+    // this function is needed to transfer information from ViewController to SecondViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // check if I choose the right path (from ViewController to SecondViewController)
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
             let destinationSVC = segue.destination as! SecondViewController
             //transferring variables total and report from TipBrain struct to SecondViewController class
             destinationSVC.total = tipBrain.getTip()
-            destinationSVC.report = tipBrain.getReport()
+            destinationSVC.report = tipBrain.getReport(person)
             
         }
         
